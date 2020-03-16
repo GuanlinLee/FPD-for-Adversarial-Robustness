@@ -5,12 +5,10 @@ This repo contains the code and data of the following paper:
 
 # Overview
 <p align="center"><img width="100%" src="Overview.png"/></p> 
-
 We propose an attack-agnostic defence framework to enhance the intrinsic robustness of neural networks, without jeopardizing the ability of generalizing clean samples. Our Feature Pyramid Decoder (FPD) framework applies to all block-based convolutional neural networks (CNNs). It implants denoising and image restoration modules into a targeted CNN, and it also constraints the Lipschitz constant of the classification layer.
 
 # Training Strategy
 <p align="center"><img width="100%" src="Training.png"/></p>
-
 Implementation details of two-phase training strategy utilizing self-supervised and multi-task learning: the enhanced CNN FPD, in which $\mathrm{FPD}_\mathrm{R}$ refers to the image restoration module; $\mathrm{FPD}_\mathrm{FD}$ stands for the front denoising module; $\mathrm{FPD}_\mathrm{BD}$ stands for the back denoising module; $\mathrm{FPD}_\mathrm{LCC}$ refers to the modified classification layer; $x_\mathrm{noisy}$ are the samples in the $\epsilon$-neighbourhood of each image. The first phase training is optimized by $L_2(x_\mathrm{clean},x_\mathrm{clean}')$ loss. If $L_2$ loss $>T$, only the parameters of $\mathrm{FPD}_\mathrm{R}$ and $\mathrm{FPD}_\mathrm{FD}$ is updated. Once the $L_2$ loss reaches the $T$, the cross-entropy (CE) loss with $L_2$ loss jointly trains the enhanced CNN. Then, the second phase train the enhanced CNN further, jointly optimized by CE loss and $L_2$ loss.
 
 # Dataset
