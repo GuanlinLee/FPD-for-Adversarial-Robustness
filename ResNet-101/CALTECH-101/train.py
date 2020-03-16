@@ -15,7 +15,7 @@ from tqdm import tqdm
 import os,sys
 import numpy as np
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 train_globa_step=0
 val_globa_step=0
 
@@ -89,8 +89,8 @@ def split_Train_Val_Data(data_dir, ratio):
     return train_dataloader, val_dataloader
 
 
-data_dir = '/256_ObjectCategories'
-trainloader, testloader = split_Train_Val_Data(data_dir, [0.95, 0.05])
+data_dir = '/101_ObjectCategories'
+trainloader, testloader = split_Train_Val_Data(data_dir, [0.9, 0.1])
 
 n = resnet.resnet101().cuda()
 
@@ -182,7 +182,6 @@ for epoch in range(epochs):
 
                     y_pre2, c_pre2 = n(y_pre)
                     y_pre2 = y_pre2.cuda()
-
                     n.zero_grad()
                     optimizer.zero_grad()
                     lossreg2 = loss1(torch.mul(y_pre2, 1.0), torch.mul( x_train, 1.0))
@@ -210,7 +209,7 @@ for epoch in range(epochs):
             loadertrain.set_postfix(loss=fmt(loss.data.item()),
 
                                     acc=fmt(correct.item() / total * 100))
-        
+
         if (epoch) % 1 ==0:
             test_loss = 0.0
             correct = 0.0

@@ -5,7 +5,6 @@ import torch.nn.functional as F
 import torch
 
 
-
 def conv3x3(in_planes, out_planes, stride=1):
     # "3x3 convolution with padding"
     return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride, padding=1, bias=False)
@@ -70,7 +69,7 @@ class Bottleneck(nn.Module):
 
 
 class ResNet(nn.Module):
-    def __init__(self, block, layers, num_classes=257):
+    def __init__(self, block, layers, num_classes=102):
         self.inplanes = 64
         super(ResNet, self).__init__()
 
@@ -208,7 +207,6 @@ class ResNet(nn.Module):
         x2 = self.avgpool(c5)
         x2 = x2.view(x2.size(0), -1)
         class_pre = self.group2(self.drop(x2))
-
         class_pre =self.reduce_tanh(class_pre)
 
         return p2,class_pre
