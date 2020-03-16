@@ -26,7 +26,7 @@ Implementation details of two-phase training strategy utilizing self-supervised 
 
 # Pre-trained Models
 
-We uploads all models we trained. You can download them freely from [here](https://drive.google.com/drive/folders/1-iNlznRof1XS7taV4xx9tN6reNQXm-yX?usp=sharing).
+We upload all models we trained. You can download them freely from [here](https://drive.google.com/drive/folders/1-iNlznRof1XS7taV4xx9tN6reNQXm-yX?usp=sharing).
 
 # Usage
 - `early_stop.py`: Early stop to avoid overfitting.
