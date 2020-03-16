@@ -39,4 +39,14 @@ We upload all models we trained. You can download them freely from [here](https:
 # Citing
 
 If you find it useful for your research, please consider citing the following reference paper:
-
+'''
+@inproceedings{li2020enhancing,
+  author    = {Guanlin Li and
+               Shuya Ding and
+               Jun Luo and
+               Chang Liu},
+  title     = {Enhancing Intrinsic Adversarial Robustness via Feature Pyramid Decoder},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2020}
+}
+'''
