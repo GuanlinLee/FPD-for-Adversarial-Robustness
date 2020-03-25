@@ -4,7 +4,7 @@ This repo contains the code and data of the following paper:
 >**Enhancing Intrinsic Adversarial Robustness via Feature Pyramid Decoder**, *Guanlin Li, Shuya Ding, Jun Luo, Chang Liu*, CVPR2020
 
 # Overview
-<p align="center"><img width="100%" src="Overview.png"/></p> 
+<p align="center"><img width="100%" src="Model.png"/></p> 
 We propose an attack-agnostic defence framework to enhance the intrinsic robustness of neural networks, without jeopardizing the ability of generalizing clean samples. Our Feature Pyramid Decoder (FPD) framework applies to all block-based convolutional neural networks (CNNs). It implants denoising and image restoration modules into a targeted CNN, and it also constraints the Lipschitz constant of the classification layer.
 
 # Training Strategy
