@@ -48,7 +48,7 @@ If you find it useful for your research, please consider citing the following re
                Chang Liu},
   title     = {Enhancing Intrinsic Adversarial Robustness via Feature Pyramid Decoder},
   booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  month = {June},
+  month     = {June},
   year      = {2020}
 }
 ```
