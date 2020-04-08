@@ -114,8 +114,8 @@ ori_acc=0
 adv_acc=0
 loadertrain = tqdm(pylist, desc='{}'.format('attack'), ncols=0)
 for x_train, y_train in loadertrain:
-
-    x_train=np.stack((x_train,x_train,x_train),1)
+    if args.s=='mnist':
+        x_train=np.stack((x_train,x_train,x_train),1)
     x_train.shape=(param['test_batch_size'],3,64,64)
 
     preds = np.argmax(fmodel.predict(x_train,batch_size=param['test_batch_size']), axis=1)
