@@ -40,7 +40,7 @@ else:
     print('Wrong dataset')
     exit(0)
 loader_test = torch.utils.data.DataLoader(testset, batch_size=param['test_batch_size'],
-										 shuffle=False, num_workers=8)
+										 shuffle=True, num_workers=8)
 
 
 class res_m(nn.Module):
