@@ -55,10 +55,11 @@ class res_m(nn.Module):
 
 pydataloader=PyTorchDataGenerator(loader_test,10000,param['test_batch_size'])
 
-pylist=[]
-for i in range(10000//param['test_batch_size']):
-    (x,y)=pydataloader.get_batch()
-    pylist.append((x,y))
+pylist = []
+for (x,y) in loader_test:
+	x=x.data.cpu().numpy()
+	y=y.data.cpu().numpy()
+	pylist.append((x, y))
 # Setup model to be attacked
 if args.a=='w':
     net = resnet.resnet101().cuda()
