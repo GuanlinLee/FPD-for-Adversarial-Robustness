@@ -1,7 +1,7 @@
 # Enhancing Intrinsic Adversarial Robustness via Feature Pyramid Decoder
 
 This repo contains the code and data of the following paper:
->**Enhancing Intrinsic Adversarial Robustness via Feature Pyramid Decoder**, *Guanlin Li, Shuya Ding, Jun Luo, Chang Liu*, CVPR2020 [[pdf]](https://arxiv.org/abs/2005.02552)
+>**Enhancing Intrinsic Adversarial Robustness via Feature Pyramid Decoder**, *Guanlin Li, Shuya Ding, Jun Luo, Chang Liu*, CVPR2020 [[pdf]](http://openaccess.thecvf.com/content_CVPR_2020/html/Li_Enhancing_Intrinsic_Adversarial_Robustness_via_Feature_Pyramid_Decoder_CVPR_2020_paper.html)
 
 # Overview
 <p align="center"><img width="100%" src="Model.png"/></p> 
