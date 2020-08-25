@@ -21,7 +21,7 @@ Implementation details of two-phase training strategy utilizing self-supervised 
 - Pytorch =1.1.0
 - torchvision
 - tqdm
-- [adversarial-robustness-toolbox](https://github.com/IBM/adversarial-robustness-toolbox)
+- [adversarial-robustness-toolbox](https://github.com/IBM/adversarial-robustness-toolbox)=0.10.0
 - [Adversarial Box](https://github.com/wanglouis49/pytorch-adversarial_box)
 
 # Pre-trained Models
