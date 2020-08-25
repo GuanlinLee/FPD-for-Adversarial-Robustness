@@ -18,7 +18,7 @@ Implementation details of two-phase training strategy utilizing self-supervised 
 # Prerequisites
 - Python 3.6
 - Numpy
-- Pytorch >=1.0.0
+- Pytorch =1.1.0
 - torchvision
 - tqdm
 - [adversarial-robustness-toolbox](https://github.com/IBM/adversarial-robustness-toolbox)
